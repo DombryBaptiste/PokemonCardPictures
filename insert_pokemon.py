@@ -3,6 +3,7 @@ import logging
 from pathlib import Path
 import mysql.connector
 from datetime import datetime
+from dotenv import load_dotenv
 
 # Création du dossier logs s'il n'existe pas
 log_dir = Path("logs")
@@ -23,11 +24,18 @@ logging.basicConfig(
 
 logger = logging.getLogger()
 
+load_dotenv()
+
+host = os.getenv('MYSQL_HOST', 'localhost')
+user = os.getenv('MYSQL_USER')
+password = os.getenv('MYSQL_PASSWORD')
+database = os.getenv('MYSQL_DATABASE')
+
 conn = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    password='qBZc9KLhynJWLKGu8clK',
-    database='pokedex-pokemon-db'
+    host=host,
+    user=user,
+    password=password,
+    database=database
 )
 cursor = conn.cursor(buffered=True)
 
