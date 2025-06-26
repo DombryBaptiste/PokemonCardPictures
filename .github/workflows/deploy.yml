@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd /var/www/pokedex-pokemon-cards
+            cd /var/www/PokemonCardPictures/
             git pull origin prod
             echo "📦 Mise à jour du dépôt effectuée"
             python3 insert_pokemon.py
