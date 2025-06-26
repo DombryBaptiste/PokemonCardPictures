@@ -35,7 +35,8 @@ conn = mysql.connector.connect(
     host=host,
     user=user,
     password=password,
-    database=database
+    database=database,
+    ssl_disabled=True
 )
 cursor = conn.cursor(buffered=True)
 
