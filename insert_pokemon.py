@@ -1,6 +1,27 @@
 import os
+import logging
 from pathlib import Path
 import mysql.connector
+from datetime import datetime
+
+# Création du dossier logs s'il n'existe pas
+log_dir = Path("logs")
+log_dir.mkdir(exist_ok=True)
+
+# Nom du fichier de log avec date+heure à la seconde
+now = datetime.now()
+log_filename = log_dir / now.strftime("%Y-%m-%d_%H-%M-%S.log")
+
+logging.basicConfig(
+    filename=log_filename,
+    filemode='a',
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%d/%m/%Y %H:%M:%S',
+    level=logging.INFO,
+    encoding='utf-8'
+)
+
+logger = logging.getLogger()
 
 conn = mysql.connector.connect(
     host='localhost',
@@ -23,7 +44,6 @@ def extract_info(filename):
     return id, local_id, extension
 
 try:
-    # Démarrer la transaction explicitement
     conn.start_transaction()
 
     cursor.execute("SELECT Id FROM PokemonCards")
@@ -37,13 +57,13 @@ try:
             continue
 
         name = subdir.name
-        print(f"🔍 Traitement de : {name}")
+        
 
         cursor.execute("SELECT Id FROM Pokemons WHERE Name = %s", (name,))
         result = cursor.fetchone()
 
         if not result:
-            print(f"❌ Pokémon non trouvé : {name}")
+            logger.error(f"❌ Pokémon non trouvé : {name}")
             continue
 
         pokemon_id = result[0]
@@ -51,29 +71,30 @@ try:
 
         for file in subdir.glob("*.jpg"):
             id, local_id, extension = extract_info(file.name)
+            logger.info(f"🔍 Traitement de : {name} : {id}")
 
             if id in existing_ids:
-                print(f"⚠️ Carte déjà existante ignorée : {id}")
+                logger.warning(f"⚠️ Carte déjà existante ignorée : {id}")
                 continue
 
             image_path = f"/pokemon-card-pictures/{subdir.name}/{file.name}"
             inserts.append((id, local_id, extension, name, image_path, pokemon_id))
             existing_ids.add(id)
+            logger.info(f"➕ Carte ajoutée : {id}")
 
     if inserts:
         cursor.executemany("""
             INSERT INTO PokemonCards (Id, LocalId, Extension, Name, Image, PokemonId)
             VALUES (%s, %s, %s, %s, %s, %s)
         """, inserts)
-        print(f"✅ {cursor.rowcount} cartes insérées avec succès.")
+        logger.info(f"✅ {cursor.rowcount} cartes insérées avec succès.")
 
-    # Commit si tout va bien
     conn.commit()
 
-    print(f"\n🎉 Traitement terminé : {pokemon_count} Pokémon(s) ont été traités.")
+    logger.info(f"\n🎉 Traitement terminé : {pokemon_count} Pokémon(s) ont été traités.")
 
 except mysql.connector.Error as err:
-    print("❌ Erreur détectée, rollback effectué :", err)
+    logger.error(f"❌ Erreur détectée, rollback effectué : {err}")
     conn.rollback()
 
 finally:
