@@ -24,7 +24,16 @@ logging.basicConfig(
 
 logger = logging.getLogger()
 
-load_dotenv()
+env_path = Path(".env")
+
+if not env_path.is_file():
+    error_msg = "Fichier .env introuvable ! Veuillez créer un fichier .env à la racine du projet."
+    logger.error(error_msg)
+    print(error_msg)
+    exit(1)
+else:
+    load_dotenv(dotenv_path=env_path)
+    logger.info(".env chargé avec succès.")
 
 host = os.getenv('MYSQL_HOST', 'localhost')
 user = os.getenv('MYSQL_USER')
