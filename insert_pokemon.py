@@ -52,7 +52,7 @@ cursor = conn.cursor(buffered=True)
 root_dir = Path("pokemon-card-pictures")
 
 def extract_info(filename):
-    id = filename.replace(".jpg", "")
+    id = Path(filename).stem
     parts = id.split("-")
     extension = parts[0]
     try:
@@ -87,7 +87,10 @@ try:
         pokemon_id = result[0]
         pokemon_count += 1
 
-        for file in subdir.glob("*.jpg"):
+        for file in subdir.glob("*"):
+            if file.suffix.lower() not in ['.jpg', '.jpeg', '.png']:
+                continue
+            
             id, local_id, extension = extract_info(file.name)
             logger.info(f"🔍 Traitement de : {name} : {id}")
 
