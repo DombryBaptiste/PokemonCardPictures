@@ -81,6 +81,7 @@ def main():
         subfolder = os.path.join(args.path, name)
         os.makedirs(subfolder, exist_ok=True)
 
+        dl_count = 0
         for card in cards:
             card_name = card.get("name", "")
             card_id = card.get("id", "")
@@ -97,8 +98,11 @@ def main():
 
             if args.download:
                 download_image(image_url, image_path)
+                dl_count = dl_count + 1
             else:
                 print(f"[TEST] {card_id} - {image_url}")
+
+        print(f"🔍✅ {dl_count} carte(s) téléchargée(s) pour {name}")
 
 if __name__ == "__main__":
     main()
