@@ -23,11 +23,11 @@ def should_ignore_card(card_name, pokemon_name):
 
 def fetch_cards(pokemon_name):
     name_query = normalize_pokemon_name(pokemon_name)
-    url = f"https://api.tcgdex.net/v2/fr/cards?name={urllib.parse.quote(name_query)}*"
-    print(f"Fetching: {url}")
+    url = f"https://api.tcgdex.net/v2/fr/cards?name=like:{urllib.parse.quote(name_query)}*"
+    print(f"🔎 Requête API : {url}")
     response = requests.get(url)
     if response.status_code != 200:
-        print(f"Erreur API pour {pokemon_name}: {response.status_code}")
+        print(f"❌ Erreur API pour {pokemon_name}: {response.status_code}")
         return []
     return response.json()
 
@@ -38,50 +38,67 @@ def download_image(image_url, output_path):
             with open(output_path, 'wb') as f:
                 for chunk in response.iter_content(1024):
                     f.write(chunk)
-            print(f"Téléchargé : {output_path}")
+            print(f"✅ Image téléchargée : {output_path}")
         else:
-            print(f"Image non trouvée : {image_url}")
+            print(f"⚠️ Image non trouvée : {image_url}")
     except Exception as e:
-        print(f"Erreur téléchargement : {e}")
+        print(f"❌ Erreur téléchargement : {e}")
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-n', '--name', help="Nom du Pokémon à chercher")
+    parser.add_argument('--names', nargs='+', help="Liste de noms de Pokémon (ex: Pikachu Salamèche)")
+    parser.add_argument('--file', help="Fichier texte contenant un nom de Pokémon par ligne")
     parser.add_argument('--path', required=True, help="Dossier de destination")
     parser.add_argument('--download', action='store_true', help="Télécharger les images")
     args = parser.parse_args()
 
-    if not args.name:
-        print("Veuillez spécifier un nom de Pokémon avec -n")
+    # Récupération des noms
+    pokemon_names = []
+
+    if args.names:
+        pokemon_names.extend(args.names)
+
+    if args.file:
+        if not os.path.exists(args.file):
+            print(f"❌ Le fichier {args.file} n'existe pas.")
+            return
+        with open(args.file, 'r', encoding='utf-8') as f:
+            file_names = [line.strip() for line in f if line.strip()]
+            pokemon_names.extend(file_names)
+
+    if not pokemon_names:
+        print("❗ Veuillez spécifier au moins un nom de Pokémon via --names ou --file")
         return
 
-    cards = fetch_cards(args.name)
-    if not cards:
-        print("Aucune carte trouvée.")
-        return
-
-    print(f"{len(cards)} cartes trouvées pour {args.name}")
-    subfolder = os.path.join(args.path, args.name)
-    os.makedirs(subfolder, exist_ok=True)
-
-    for card in cards:
-        card_name = card.get("name", "")
-        card_id = card.get("id", "")
-        image = card.get("image")
-
-        if should_ignore_card(card_name, args.name):
+    for name in pokemon_names:
+        print(f"\n📦 Traitement de {name}...")
+        cards = fetch_cards(name)
+        if not cards:
+            print(f"❌ Aucune carte trouvée pour {name}.")
             continue
 
-        if not image or "/tcgp/" in image:
-            continue
+        print(f"🔍 {len(cards)} carte(s) trouvée(s) pour {name}")
+        subfolder = os.path.join(args.path, name)
+        os.makedirs(subfolder, exist_ok=True)
 
-        image_url = image + "/low.jpg"
-        image_path = os.path.join(subfolder, f"{card_id}.jpg")
+        for card in cards:
+            card_name = card.get("name", "")
+            card_id = card.get("id", "")
+            image = card.get("image")
 
-        if args.download:
-            download_image(image_url, image_path)
-        else:
-            print(f"[TEST] {card_id} - {image_url}")
+            if should_ignore_card(card_name, name):
+                continue
+
+            if not image or "/tcgp/" in image:
+                continue
+
+            image_url = image + "/low.jpg"
+            image_path = os.path.join(subfolder, f"{card_id}.jpg")
+
+            if args.download:
+                download_image(image_url, image_path)
+            else:
+                print(f"[TEST] {card_id} - {image_url}")
 
 if __name__ == "__main__":
     main()
