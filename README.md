@@ -15,6 +15,7 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 6. **Néo Discovery**
 6. **Néo Révélation**
 7. **Néo Destiny**
+8. **Expédition**
 
 ## 🗂️ Organisation du dossier
 
