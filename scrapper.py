@@ -72,7 +72,7 @@ def main():
             print("❌ Aucune carte trouvée dans le set.")
             return
 
-        folder = os.path.join(args.path, "sets", args.set)
+        folder = os.path.join(args.path, args.set)
         os.makedirs(folder, exist_ok=True)
 
         for card in cards:
