@@ -9,6 +9,7 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 
 1. **Set de base**
 2. **Jungle**
+3. **Fossile**
 
 ## 🗂️ Organisation du dossier
 
