@@ -27,6 +27,7 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 3. **Dragon**
 4. **Team Magma vs Team Aqua**
 5. **Légendes Oubliées**
+6. **Rouge Feu & Vert Feuille**
 
 ## 🗂️ Organisation du dossier
 
