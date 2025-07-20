@@ -33,6 +33,10 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 9. **Forces Cachées**
 10. **Espèce Delta**
 11. **Créateur de Légendes**
+12. **Fantômes Holon**
+13. **Gardiens de Cristal**
+14. **Île des Dragons**
+15. **Gardiens du Pouvoir**
 
 ## 🗂️ Organisation du dossier
 
