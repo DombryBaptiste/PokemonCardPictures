@@ -25,6 +25,8 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 1. **Rubis & Saphir**
 2. **Tempête de Sable**
 3. **Dragon**
+4. **Team Magma vs Team Aqua**
+5. **Légendes Oubliées**
 
 ## 🗂️ Organisation du dossier
 
