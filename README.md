@@ -13,6 +13,8 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 4. **Team Rocket**
 5. **Néo Genesis**
 6. **Néo Discovery**
+6. **Néo Révélation**
+7. **Néo Destiny**
 
 ## 🗂️ Organisation du dossier
 
