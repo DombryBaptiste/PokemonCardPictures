@@ -24,6 +24,7 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 
 1. **Rubis & Saphir**
 2. **Tempête de Sable**
+3. **Dragon**
 
 ## 🗂️ Organisation du dossier
 
