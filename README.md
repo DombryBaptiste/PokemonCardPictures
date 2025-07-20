@@ -11,6 +11,7 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 2. **Jungle**
 3. **Fossile**
 4. **Team Rocket**
+5. **Néo Genesis**
 
 ## 🗂️ Organisation du dossier
 
