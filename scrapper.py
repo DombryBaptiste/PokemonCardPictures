@@ -73,7 +73,6 @@ def main():
             return
 
         folder = os.path.join(args.path, args.set)
-        os.makedirs(folder, exist_ok=True)
 
         for card in cards:
             card_id = card.get("id")
