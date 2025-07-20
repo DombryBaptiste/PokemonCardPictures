@@ -30,6 +30,9 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 6. **Rouge Feu & Vert Feuille**
 7. **Deoxys**
 8. **Emeraude**
+9. **Forces Cachées**
+10. **Espèce Delta**
+11. **Créateur de Légendes**
 
 ## 🗂️ Organisation du dossier
 
