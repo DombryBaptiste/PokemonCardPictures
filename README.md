@@ -12,6 +12,7 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 3. **Fossile**
 4. **Team Rocket**
 5. **Néo Genesis**
+6. **Néo Discovery**
 
 ## 🗂️ Organisation du dossier
 
