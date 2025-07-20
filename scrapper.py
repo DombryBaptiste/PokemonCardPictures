@@ -1,4 +1,7 @@
-# USE : python .\scrapper.py -n "Félicanis" --path "./output" --download
+# USE : 
+# python .\scrapper.py -n "Félicanis" --path "./output" --download
+# python .\scrapper.py --names "Félicanis" "Fortusimia" --path "./output" --download
+# python .\scrapper.py --set swsh3 --path "./output" --download
 
 import os
 import argparse
@@ -31,6 +34,15 @@ def fetch_cards(pokemon_name):
         return []
     return response.json()
 
+def fetch_cards_by_set(set_id):
+    url = f"https://api.tcgdex.net/v2/fr/sets/{set_id}"
+    print(f"📦 Requête API du set : {url}")
+    response = requests.get(url)
+    if response.status_code != 200:
+        print(f"❌ Erreur API pour le set {set_id} : {response.status_code}")
+        return []
+    return response.json().get("cards", [])
+
 def download_image(image_url, output_path):
     try:
         response = requests.get(image_url, stream=True)
@@ -48,9 +60,44 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--names', nargs='+', help="Liste de noms de Pokémon (ex: Pikachu Salamèche)")
     parser.add_argument('--file', help="Fichier texte contenant un nom de Pokémon par ligne")
+    parser.add_argument('--set', help="Identifiant du set (ex: swsh3)")
     parser.add_argument('--path', required=True, help="Dossier de destination")
     parser.add_argument('--download', action='store_true', help="Télécharger les images")
     args = parser.parse_args()
+
+    if args.set:
+        # Scraping par set
+        cards = fetch_cards_by_set(args.set)
+        if not cards:
+            print("❌ Aucune carte trouvée dans le set.")
+            return
+
+        folder = os.path.join(args.path, "sets", args.set)
+        os.makedirs(folder, exist_ok=True)
+
+        for card in cards:
+            card_id = card.get("id")
+            image = card.get("image")
+            name = card.get("name")
+
+            if not image or "/tcgp/" in image:
+                continue
+
+            # On récupère seulement le premier mot du nom comme nom du Pokémon
+            pokemon_name = name.split(" ")[0]
+
+            subfolder = os.path.join(args.path, pokemon_name)
+            os.makedirs(subfolder, exist_ok=True)
+
+            image_url = image + "/low.jpg"
+            image_path = os.path.join(subfolder, f"{card_id}.jpg")
+
+            if args.download:
+                download_image(image_url, image_path)
+            else:
+                print(f"[TEST SET] {card_id} - {image_url}")
+
+        return
 
     # Récupération des noms
     pokemon_names = []
