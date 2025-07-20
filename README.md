@@ -7,6 +7,8 @@ Chaque dossier porte le nom d’un Pokémon et contient toutes les cartes associ
 
 Les sets suivants ont été entièrement vérifiés et sont complets :
 
+# Wizard
+
 1. **Set de base**
 2. **Jungle**
 3. **Fossile**
@@ -17,6 +19,10 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 7. **Néo Destiny**
 8. **Expédition**
 9. **Aquapolis**
+
+# EX
+
+1. **Rubis & Saphire**
 
 ## 🗂️ Organisation du dossier
 
