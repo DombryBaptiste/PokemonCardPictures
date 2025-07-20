@@ -22,7 +22,8 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 
 # EX
 
-1. **Rubis & Saphire**
+1. **Rubis & Saphir**
+2. **Tempête de Sable**
 
 ## 🗂️ Organisation du dossier
 
