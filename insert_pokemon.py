@@ -67,7 +67,7 @@ try:
     cursor.execute("SELECT Id FROM PokemonCards")
     existing_ids = set(row[0] for row in cursor.fetchall())
 
-    cursor.execute("SELECT SetId, Id FROM sets")
+    cursor.execute("SELECT SetId, Id FROM Sets")
     set_mapping = {row[0]: row[1] for row in cursor.fetchall()}
     logger.info(f"{len(set_mapping)} extensions chargées depuis la table 'sets'.")
 
