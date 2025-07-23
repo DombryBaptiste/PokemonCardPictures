@@ -38,6 +38,10 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 14. **Île des Dragons**
 15. **Gardiens du Pouvoir**
 
+# PLATINE
+
+1. **Platine**
+
 ## 🗂️ Organisation du dossier
 
 pokemon-card-pictures/
