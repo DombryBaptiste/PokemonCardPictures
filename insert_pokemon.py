@@ -67,6 +67,10 @@ try:
     cursor.execute("SELECT Id FROM PokemonCards")
     existing_ids = set(row[0] for row in cursor.fetchall())
 
+    cursor.execute("SELECT SetId, Id FROM sets")
+    set_mapping = {row[0]: row[1] for row in cursor.fetchall()}
+    logger.info(f"{len(set_mapping)} extensions chargées depuis la table 'sets'.")
+
     inserts = []
     pokemon_count = 0
 
@@ -77,7 +81,7 @@ try:
         name = subdir.name
         
 
-        cursor.execute("SELECT Id FROM Pokemons WHERE Name = %s", (name,))
+        cursor.execute("SELECT * FROM Pokemons WHERE Name = %s", (name,))
         result = cursor.fetchone()
 
         if not result:
@@ -98,16 +102,25 @@ try:
                 logger.warning(f"⚠️ Carte déjà existante ignorée : {id}")
                 continue
 
+            set_id = set_mapping.get(extension)
+
+            if not set_id:
+                logger.error(f"❌ SetId introuvable pour extension : {extension}")
+                continue
+
+
             image_path = f"/pokemon-card-pictures/{subdir.name}/{file.name}"
-            inserts.append((id, local_id, extension, name, image_path, pokemon_id))
+            inserts.append((id, local_id, extension, name, image_path, pokemon_id, set_id))
             existing_ids.add(id)
             logger.info(f"➕ Carte ajoutée : {id}")
 
     if inserts:
+        logger.info(f"Inserts à faire : {len(inserts)}")
         cursor.executemany("""
-            INSERT INTO PokemonCards (Id, LocalId, Extension, Name, Image, PokemonId)
-            VALUES (%s, %s, %s, %s, %s, %s)
+            INSERT INTO PokemonCards (Id, LocalId, Extension, Name, Image, PokemonId, SetId)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
         """, inserts)
+        logger.info(f"Rows insérées (rowcount) : {cursor.rowcount}")
         logger.info(f"✅ {cursor.rowcount} cartes insérées avec succès.")
 
     conn.commit()
