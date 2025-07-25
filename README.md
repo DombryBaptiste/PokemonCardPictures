@@ -78,6 +78,9 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 10. **Impulsion Turbo**
 11. **Rupture Turbo**
 12. **Générations**
+13. **Impact des Destins**
+14. **Offensive Vapeur**
+15. **Evolutions**
 
 # Promos
 
