@@ -57,6 +57,10 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 2. **Pouvoir Emergeants**
 3. **Nobles Victoires**
 4. **Destinées Futures**
+5. **Explorateurs Obscurs**
+6. **Dragons Exaltés**
+7. **Coffre des Dragons**
+8. **Fontières Franchies**
 
 ## 🗂️ Organisation du dossier
 
