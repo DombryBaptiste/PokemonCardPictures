@@ -41,6 +41,8 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 # PLATINE
 
 1. **Platine**
+2. **Rivaux Emergeants**
+3. **Vainqueurs Supreme**
 
 ## 🗂️ Organisation du dossier
 
