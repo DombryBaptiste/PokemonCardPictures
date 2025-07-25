@@ -64,6 +64,10 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 9. **Glaciation Plasma**
 10. **Explosion Plasma**
 
+# Promos
+
+1. **BW Promos**
+
 ## 🗂️ Organisation du dossier
 
 pokemon-card-pictures/
