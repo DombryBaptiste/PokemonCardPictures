@@ -69,6 +69,9 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 1. **Bienvenue à Kalos**
 2. **X Y**
 3. **Etincelles**
+4. **Poings Furieux**
+2. **Vigueur Spectrale**
+3. **Primo Choc**
 
 # Promos
 
