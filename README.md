@@ -64,6 +64,12 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 9. **Glaciation Plasma**
 10. **Explosion Plasma**
 
+# X Y
+
+1. **Bienvenue à Kalos**
+2. **X Y**
+3. **Etincelles**
+
 # Promos
 
 1. **BW Promos**
