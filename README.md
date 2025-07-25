@@ -70,8 +70,11 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 2. **X Y**
 3. **Etincelles**
 4. **Poings Furieux**
-2. **Vigueur Spectrale**
-3. **Primo Choc**
+5. **Vigueur Spectrale**
+6. **Primo Choc**
+7. **Double Danger**
+8. **Ciel Rugissant**
+9. **Origines Antiques**
 
 # Promos
 
