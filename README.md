@@ -44,6 +44,13 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 2. **Rivaux Emergeants**
 3. **Vainqueurs Supreme**
 
+# HeartGold SoulSilver
+
+1. **HeartGold SoulSilver**
+2. **Déchainement**
+3. **Indomptable**
+4. **Triomphe**
+
 # Noir et Blanc
 
 1. **Noir & Blanc**
