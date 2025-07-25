@@ -60,7 +60,9 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 5. **Explorateurs Obscurs**
 6. **Dragons Exaltés**
 7. **Coffre des Dragons**
-8. **Fontières Franchies**
+8. **Tempête Plasma**
+9. **Glaciation Plasma**
+10. **Explosion Plasma**
 
 ## 🗂️ Organisation du dossier
 
