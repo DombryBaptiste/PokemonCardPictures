@@ -75,6 +75,9 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 7. **Double Danger**
 8. **Ciel Rugissant**
 9. **Origines Antiques**
+10. **Impulsion Turbo**
+11. **Rupture Turbo**
+12. **Générations**
 
 # Promos
 
