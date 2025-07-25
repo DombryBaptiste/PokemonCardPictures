@@ -38,11 +38,18 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 14. **Île des Dragons**
 15. **Gardiens du Pouvoir**
 
-# PLATINE
+# Platine
 
 1. **Platine**
 2. **Rivaux Emergeants**
 3. **Vainqueurs Supreme**
+
+# Noir et Blanc
+
+1. **Noir & Blanc**
+2. **Pouvoir Emergeants**
+3. **Nobles Victoires**
+4. **Destinées Futures**
 
 ## 🗂️ Organisation du dossier
 
