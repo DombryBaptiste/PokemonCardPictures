@@ -73,6 +73,7 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 # Promos
 
 1. **BW Promos**
+2. **XY Promos**
 
 ## 🗂️ Organisation du dossier
 
