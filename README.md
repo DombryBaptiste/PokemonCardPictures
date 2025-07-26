@@ -97,6 +97,12 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 11. **Harmonie des Esprits**
 12. **Eclipse Cosmique**
 
+# Epee et Bouclier
+
+1. **Epee et Bouclier**
+2. **Clash des Rebelles**
+3. **Ténèbres Embrasées**
+
 # Promos
 
 1. **BW Promos**
