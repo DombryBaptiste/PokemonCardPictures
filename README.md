@@ -82,10 +82,31 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 14. **Offensive Vapeur**
 15. **Evolutions**
 
+# Soleil et Lune
+
+1. **Soleil et Lune**
+2. **Gardiens Ascendants**
+3. **Ombres Ardentes**
+4. **Invasion Carmin**
+5. **Ultra-Prisme**
+6. **Lumière Interdite**
+7. **Tempête Céleste**
+8. **Tonerre Perdu**
+9. **Duo de Choc**
+10. **Alliance Infaillble**
+11. **Harmonie des Esprits**
+12. **Eclipse Cosmique**
+
 # Promos
 
 1. **BW Promos**
 2. **XY Promos**
+
+# Sets Manquants
+. **SM Promos**
+. **Légendes Brillantes**
+. **Majesté Des Dragons**
+. **Destinées Occultes**
 
 ## 🗂️ Organisation du dossier
 

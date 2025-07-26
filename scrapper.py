@@ -84,6 +84,8 @@ def main():
 
             # On récupère seulement le premier mot du nom comme nom du Pokémon
             pokemon_name = name.split(" ")[0]
+            if ':' in pokemon_name:
+                pokemon_name = pokemon_name.replace(':', ' ')
 
             subfolder = os.path.join(args.path, pokemon_name)
             os.makedirs(subfolder, exist_ok=True)
