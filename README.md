@@ -106,6 +106,16 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 5. **Voltage Eclatant**
 6. **Destinée Radieuse**
 7. **Styles de Combat**
+6. **Règne de Glace**
+7. **Evolution Celeste**
+8. **Célébrations**
+9. **Poing de Fusion**
+10. **Stars Etincelante**
+11. **Astres Radieux**
+12. **Pokémon Go**
+13. **Origine Perdue**
+14. **Tempête Argentée**
+15. **Zénith Suprême**
 
 # Promos
 
