@@ -101,6 +101,7 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 
 1. **BW Promos**
 2. **XY Promos**
+3. **SWSH Promos**
 
 # Sets Manquants
 . **SM Promos**
