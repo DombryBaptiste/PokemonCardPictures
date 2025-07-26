@@ -102,6 +102,10 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 1. **Epee et Bouclier**
 2. **Clash des Rebelles**
 3. **Ténèbres Embrasées**
+4. **La Voie du maitre**
+5. **Voltage Eclatant**
+6. **Destinée Radieuse**
+7. **Styles de Combat**
 
 # Promos
 
