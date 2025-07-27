@@ -117,11 +117,30 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 14. **Tempête Argentée**
 15. **Zénith Suprême**
 
+# Ecarlate et Violet
+
+1. **Ecarlate et Violet**
+2. **Evolution à Paldéa**
+3. **Flammes Obsidiennes**
+4. **151**
+5. **Faille Paradoxe**
+6. **Forces Temporelles**
+7. **Mascarade Crépusculaire**
+8. **Fable Nébuleuse**
+9. **Couronne Stellaire**
+10. **Etincelles Déferlantes**
+11. **Evolutions Prismatiques**
+12. **Aventure Ensemble**
+13. **Rivalités Destinées**
+14. **Foudre Noire**
+15. **Flamme Blanche**
+
 # Promos
 
 1. **BW Promos**
 2. **XY Promos**
 3. **SWSH Promos**
+4. **SV Promos**
 
 # Sets Manquants
 . **SM Promos**
