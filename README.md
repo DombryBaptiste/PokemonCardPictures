@@ -38,9 +38,115 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 14. **Île des Dragons**
 15. **Gardiens du Pouvoir**
 
-# PLATINE
+# Platine
 
 1. **Platine**
+2. **Rivaux Emergeants**
+3. **Vainqueurs Supreme**
+
+# HeartGold SoulSilver
+
+1. **HeartGold SoulSilver**
+2. **Déchainement**
+3. **Indomptable**
+4. **Triomphe**
+
+# Noir et Blanc
+
+1. **Noir & Blanc**
+2. **Pouvoir Emergeants**
+3. **Nobles Victoires**
+4. **Destinées Futures**
+5. **Explorateurs Obscurs**
+6. **Dragons Exaltés**
+7. **Coffre des Dragons**
+8. **Tempête Plasma**
+9. **Glaciation Plasma**
+10. **Explosion Plasma**
+
+# X Y
+
+1. **Bienvenue à Kalos**
+2. **X Y**
+3. **Etincelles**
+4. **Poings Furieux**
+5. **Vigueur Spectrale**
+6. **Primo Choc**
+7. **Double Danger**
+8. **Ciel Rugissant**
+9. **Origines Antiques**
+10. **Impulsion Turbo**
+11. **Rupture Turbo**
+12. **Générations**
+13. **Impact des Destins**
+14. **Offensive Vapeur**
+15. **Evolutions**
+
+# Soleil et Lune
+
+1. **Soleil et Lune**
+2. **Gardiens Ascendants**
+3. **Ombres Ardentes**
+4. **Invasion Carmin**
+5. **Ultra-Prisme**
+6. **Lumière Interdite**
+7. **Tempête Céleste**
+8. **Tonerre Perdu**
+9. **Duo de Choc**
+10. **Alliance Infaillble**
+11. **Harmonie des Esprits**
+12. **Eclipse Cosmique**
+
+# Epee et Bouclier
+
+1. **Epee et Bouclier**
+2. **Clash des Rebelles**
+3. **Ténèbres Embrasées**
+4. **La Voie du maitre**
+5. **Voltage Eclatant**
+6. **Destinée Radieuse**
+7. **Styles de Combat**
+6. **Règne de Glace**
+7. **Evolution Celeste**
+8. **Célébrations**
+9. **Poing de Fusion**
+10. **Stars Etincelante**
+11. **Astres Radieux**
+12. **Pokémon Go**
+13. **Origine Perdue**
+14. **Tempête Argentée**
+15. **Zénith Suprême**
+
+# Ecarlate et Violet
+
+1. **Ecarlate et Violet**
+2. **Evolution à Paldéa**
+3. **Flammes Obsidiennes**
+4. **151**
+5. **Faille Paradoxe**
+6. **Forces Temporelles**
+7. **Mascarade Crépusculaire**
+8. **Fable Nébuleuse**
+9. **Couronne Stellaire**
+10. **Etincelles Déferlantes**
+11. **Evolutions Prismatiques**
+12. **Aventure Ensemble**
+13. **Rivalités Destinées**
+14. **Foudre Noire**
+15. **Flamme Blanche**
+
+# Promos
+
+1. **BW Promos**
+2. **XY Promos**
+3. **SWSH Promos**
+4. **SV Promos**
+
+# Sets Manquants
+. **SM Promos**
+. **Légendes Brillantes**
+. **Majesté Des Dragons**
+. **Destinées Occultes**
 
 ## 🗂️ Organisation du dossier
 
