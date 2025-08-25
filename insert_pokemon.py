@@ -55,10 +55,7 @@ def extract_info(filename):
     id = Path(filename).stem
     parts = id.split("-")
     extension = parts[0]
-    try:
-        local_id = int(parts[1])
-    except:
-        local_id = id
+    local_id = parts[1] if len(parts) > 1 else ""
     return id, local_id, extension
 
 try:
