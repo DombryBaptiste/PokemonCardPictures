@@ -135,12 +135,18 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 14. **Foudre Noire**
 15. **Flamme Blanche**
 
+# Méga Evolution
+
+1. **Méga Evolution**
+2. **Flammes Phantasmagorique (partiel)**
+
 # Promos
 
 1. **BW Promos**
 2. **XY Promos**
 3. **SWSH Promos**
 4. **SV Promos**
+5. **ME Promos (partiel)**
 
 # Sets Manquants
 . **SM Promos**
