@@ -138,7 +138,8 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 # Méga Evolution
 
 1. **Méga Evolution**
-2. **Flammes Phantasmagorique (partiel)**
+2. **Flammes Phantasmagorique**
+3. **Héros Transcendants**
 
 # Promos
 
