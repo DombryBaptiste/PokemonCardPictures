@@ -140,6 +140,7 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 1. **Méga Evolution**
 2. **Flammes Phantasmagorique**
 3. **Héros Transcendants**
+4. **Equilibre Parfait**
 
 # Promos
 
