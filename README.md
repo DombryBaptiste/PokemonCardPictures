@@ -141,6 +141,7 @@ Les sets suivants ont été entièrement vérifiés et sont complets :
 2. **Flammes Phantasmagorique**
 3. **Héros Transcendants**
 4. **Equilibre Parfait**
+5. **Chaos Ascendant**
 
 # Promos
 
